@@ -1,0 +1,691 @@
+/* Página 1 */
+#page1 {
+  background-image: url("images/fondo1.gif") !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Página 2 */
+#page2 {
+  background-color: rgb(30, 31, 32);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 7px 0;
+}
+
+
+
+/* Botones header */
+.btn{
+  text-wrap: nowrap;
+  flex-wrap: wrap;
+  background-image: url("images/fondo_btn.gif");
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+
+
+}
+
+
+/* Efecto al pasar el raton */
+.btn:hover {
+  background-color: #495057; /* Color más oscuro al pasar el mouse */
+  transform: scale(1.05); /* Agranda ligeramente el botón */
+}
+
+
+/* Páginas */
+.page {
+  display: none;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  transition: opacity 0.8s ease;
+}
+
+.linkedin-foto{
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  filter: none !important;
+}
+
+/* Skills */
+.skill-icon {
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-icon i {
+  font-size: 50px;
+}
+
+.skill-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Colores específicos para cada icono */
+.html {
+  background-color: #E44D26; /* Color de HTML */
+}
+
+.css {
+  background-color: #1572B6; /* Color de CSS */
+}
+
+.js {
+  background-color: #F7DF1E; /* Color de JavaScript */
+}
+
+.java {
+  background-color: #007396; /* Color de Java */
+}
+
+.docker {
+  background-color: #2496ED; /* Color de Docker */
+}
+
+.mysql {
+  background-color: #00758F; /* Color de MySQL */
+}
+
+@media (max-width: 576px) {
+  .skill-icon {
+      margin: 15px 0;
+  }
+}
+
+/* Formacion estilos */
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  overflow-y: auto; /* Añade scroll vertical si el contenido excede el tamaño */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.overlay .overlay-text {
+  max-height: 80%; /* Limita la altura del contenido */
+  overflow-y: auto; /* Activa el scroll solo en el contenido de texto */
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.timeline-content h3, .timeline-date, .timeline-icon {
+  color: white;
+}
+
+.timeline-icon {
+  font-size: 1.2rem;
+}
+
+/* Experiencia estilos */
+.image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+.experience-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.75);
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0; /* Inicialmente oculto */
+  pointer-events: none; /* Evita que se pueda interactuar cuando está oculto */
+}
+
+/* Mostrar la experiencia al pasar el ratón */
+.image-container:hover .experience-card {
+  opacity: 1; /* Muestra la tarjeta */
+  pointer-events: auto; /* Permite la interacción */
+}
+
+/* Estilos para los encabezados y texto */
+.experience-card h2 {
+  font-size: 1.8rem;
+  color: #ffc107;
+  margin-bottom: 10px;
+}
+
+.experience-header h3 {
+  font-size: 1.5rem;
+  margin: 0 0 5px;
+}
+
+.experience-date {
+  font-size: 0.9rem;
+  color: #f8f9fa;
+  background: #343a40;
+  padding: 4px 8px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+/* Efecto de elevación al pasar el ratón */
+.experience-card:hover {
+  transform: translate(-50%, -55%);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.experience-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+
+/* Overlay para las imágenes */
+.image-container {
+  position: relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1000px;
+  height: 600px;
+  cursor: pointer;
+
+}
+
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  flex-direction: column;
+}
+
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+img {
+  filter: blur(0);
+  transition: filter 0.1s ease;
+}
+
+
+.image-container:hover img {
+  filter: blur(5px);
+}
+
+.overlay-text {
+  font-size: 20px;
+  text-align: center;
+}
+
+/* Texto con efecto*/
+#typing-text {
+  font-family: 'Rubik', sans-serif;
+  color: black !important;
+  border-right: 2px solid;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: caret 0.75s step-end infinite;
+  font-weight: bold;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+
+/* Carrusel */
+.carousel-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80vh;
+  opacity: 0; /* Comienza con opacidad 0 */
+  transform: translateX(100%); /* Empuja el item fuera de la vista a la derecha */
+  transition: opacity 0.5s ease, transform 3s ease; /* Transiciones para opacidad y transformación */
+}
+
+
+.carousel-item.active {
+  opacity: 1;
+  transform: translateX(0); /* Lleva el item a su posición original */
+}
+
+/* Para los items que están a la izquierda */
+.carousel-item.prev {
+  opacity: 1; /* Muestra el item que se desliza desde la izquierda */
+  transform: translateX(-100%); /* Desliza el item desde la izquierda */
+}
+
+
+
+
+/* Botón interactivo pagina 1 */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  --color-text: #9ee5fa;
+  --color-background: #353535;
+  --color-outline: #9ee5fa80;
+  --color-shadow: #00000080;
+}
+
+.btn-content {
+  display: flex;
+  align-items: center;
+  padding: 0px 3px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: 1s;
+  border-radius: 100px;
+  box-shadow: 0 0 0.2em 0 var(--color-background);
+}
+
+.btn-content:hover,
+.btn-content:focus {
+  transition: 0.5s;
+  animation: btn-content 1s;
+  outline: 0.1em solid transparent;
+  outline-offset: 0.2em;
+  box-shadow: 0 0 0.4em 0 var(--color-background);
+}
+
+.btn-content .icon-arrow {
+  transition: 0.5s;
+  margin-right: 0;
+  transform: scale(0.6);
+}
+
+.btn-content:hover .icon-arrow {
+  transition: 0.5s;
+  margin-right: 25px;
+}
+
+.icon-arrow {
+  width: 20px;
+  margin-left: 15px;
+  position: relative;
+  top: 6%;
+}
+
+/* SVG */
+#arrow-icon-one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+#arrow-icon-two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.btn-content:hover #arrow-icon-three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.btn-content:hover #arrow-icon-one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.btn-content:hover #arrow-icon-two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+/* Animaciones */
+@keyframes color_anim {
+  0% {
+    fill: white;
+  }
+  50% {
+    fill: var(--color-background);
+  }
+  100% {
+    fill: #9ee5fa;
+  }
+}
+
+@keyframes btn-content {
+  0% {
+    outline: 0.2em solid var(--color-background);
+    outline-offset: 0;
+  }
+}
+
+/* Imagen 5 */
+
+.container-music{
+  position: absolute;
+  top: 50%; /* Posición vertical centrada */
+  left: 50%; /* Posición horizontal centrada */
+  transform: translate(-50%, -50%); /* Ajusta el elemento para centrarlo perfectamente */
+  border-radius: 12px;
+  border: 2px solid transparent;  /* Borde inicial */
+  transition: border-color 0.3s ease;
+
+}
+
+.container-music:hover{
+  box-shadow: 0 4px 15px rgb(59, 255, 137);
+  border-color: #3bff89;  /* Cambia el color del borde */
+
+}
+
+/* Video */
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* Mantiene la relación de aspecto 16:9 (altura respecto al ancho) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* El iframe se ajusta al tamaño del contenedor */
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none; /* Quita el borde del iframe */
+}
+
+
+/* Formulario */
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.group {
+  position: relative;
+}
+
+.form .group label {
+  font-size: 14px;
+  color: rgb(99, 102, 102);
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background-color: #fff;
+  transition: all .3s ease;
+}
+
+.form .group input,
+.form .group textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  outline: 0;
+  width: 100%;
+  background-color: transparent;
+}
+
+.form .group input:placeholder-shown+ label, .form .group textarea:placeholder-shown +label {
+  top: 10px;
+  background-color: transparent;
+}
+
+.form .group input:focus,
+.form .group textarea:focus {
+  border-color: #3366cc;
+}
+
+.form .group input:focus+ label, .form .group textarea:focus +label {
+  top: -10px;
+  left: 10px;
+  background-color: #fff;
+  color: #3366cc;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form .group textarea {
+  resize: none;
+  height: 100px;
+}
+
+.form button {
+  background-color: #3366cc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #27408b;
+}
+
+
+
+
+/* Boton redes sociales */
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 10px;
+  border-radius: 5em;
+}
+
+.social-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 4px #00000027;
+  transition: 0.3s;
+}
+
+.social-button:hover {
+  background-color: #f2f2f2;
+  box-shadow: 0px 0px 6px 3px #00000027;
+}
+
+.social-buttons svg {
+  transition: 0.3s;
+  height: 1.25em;
+}
+
+.email {
+  background-color: #0077cc; /* Cambia el color de fondo */
+}
+
+.email svg {
+  fill: #ffffff; /* Cambia el color del icono */
+}
+
+.email:hover svg {
+  fill: #ffcc00; /* Cambia el color del icono al pasar el mouse */
+}
+
+
+.github {
+  background-color: #333;
+}
+
+.github svg {
+  width: 25px;
+  height: 25px;
+  fill: #f2f2f2;
+}
+
+.github:hover svg {
+  fill: #333;
+}
+
+.linkedin {
+  background-color: #0077b5;
+}
+
+.linkedin svg {
+  fill: #f2f2f2;
+}
+
+.linkedin:hover svg {
+  fill: #0077b5;
+}
+
+.instagram {
+  background-color: #c13584;
+}
+
+.instagram svg {
+  fill: #f2f2f2;
+}
+
+.instagram:hover svg {
+  fill: #c13584;
+}
+
+/* Botón Spotify */
+.spotify {
+  background-color: #1db954; /* Color verde de Spotify */
+}
+
+.spotify svg {
+  fill: #ffffff; /* Icono en blanco */
+}
+
+.spotify:hover {
+  background-color: #1ed760; /* Color verde más brillante para hover */
+}
+
+.spotify:hover svg {
+  fill: #ffffff; /* Icono en blanco al pasar el mouse */
+}
+
+/* Footer y responsive */
+#footerPrincipal {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 7px 0;
+
+}
+
+#footerPrincipal p {
+  font-size: 1rem; /* Tamaño base */
+}
+
+@media (max-width: 768px) {
+  #footerPrincipal p {
+    font-size: 0.8rem; /* Más pequeño en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  #footerPrincipal p {
+    font-size: 0.6rem; /* Aún más pequeño en móviles */
+  }
+}
+
+.active {
+  display: flex !important;
+  opacity: 1;
+}
