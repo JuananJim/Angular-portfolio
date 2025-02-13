@@ -1,6 +1,7 @@
 /* Página 1 */
 #page1 {
-  background-image: url("images/fondo1.gif") !important;
+  background-image: url("/public/images/img5.gif");
+  background-color: #636363;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -35,7 +36,7 @@ header {
 .btn{
   text-wrap: nowrap;
   flex-wrap: wrap;
-  background-image: url("images/fondo_btn.gif");
+  /* background-image: url("images/fondo_btn.gif"); */
   color: white;
   border: none;
   outline: none;
